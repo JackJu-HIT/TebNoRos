@@ -5,10 +5,9 @@
 #include "inc/obstacles.h"
 #include "inc/optimal_planner.h"
 #include<boost/smart_ptr.hpp>
-//
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui_c.h>
-#include "matplotlibcpp.h"
+//#include "matplotlibcpp.h"
 
 using namespace teb_local_planner;
 using namespace std;
@@ -65,7 +64,6 @@ int main()
                 cv::line(show_map,cv::Point(x,y),cv::Point(next_x,next_y),cv::Scalar(255,255,255));
                 cout<<"("<<path.at(i)[0]<<","<<path.at(i)[1]<<")"<<endl;
             }
-            break;
             cv::namedWindow("myWindowName");//创建窗口
             cv::createTrackbar("start theta","path",&start_theta,100);
             cv::createTrackbar("end theta","path",&end_theta,100);
